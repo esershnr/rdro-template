@@ -1,2 +1,2 @@
-# red-dead-rehber
-Red Dead Online için geliştirilmiş türkçe rehber.
+# red-dead-redemption-template
+Red Dead Redemption / Online - HTML Template [HTML, CSS, JS] 
