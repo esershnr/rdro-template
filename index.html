@@ -1,0 +1,1352 @@
+﻿<!DOCTYPE html>
+
+<html lang="tr" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Red Dead Rehber</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <link rel="stylesheet" href="style/custom.css">
+</head>
+
+<body>
+
+  <div class="container-fluid">
+
+
+    <!--  -------------------------Mobile Menu-------------------------  -->
+
+    <div class="mobile-menu">
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand fs-1" href="#"><span class="rdrc">RED DEAD</span> REHBER</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 fs-2">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">YETENEK KARTLARI</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Bağış</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">İLETİŞİM</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <!--  -------------------------Mobile Menu-------------------------  -->
+
+
+    <div class="row">
+      <div class="sol-kol col-2 semi-trans-bg min-vh-100">
+        <!--  -------------------------Menu-------------------------  -->
+        <div class=" col-2 p-3 text-center d-flex flex-column navside justify-content-around align-items-center fs-2">
+          <div class="row menu-logo">
+            <img src="images/logo/logo-light-col.png" class="img-fluid" alt="logo">
+          </div>
+          <div class="row">
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link active" href="#">YETENEK KARTLARI</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#">BAĞIŞ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">İLETİŞİM</a>
+              </li>
+            </ul>
+          </div>
+          <div class="row fs-1">
+            <div class="social-link discord"><i class="fab fa-discord"></i></div>
+          </div>
+        </div>
+        <!--  -------------------------Menu-------------------------  -->
+
+        
+      </div>
+      <div class="col min-vh-100">
+        <div class="row martop-100">
+          <h1 class="text-center"><span class="rdrc">RED DEAD ONLINE</span> TÜRKÇE REHBER</h1>
+        </div>
+
+
+        <!--!  -------------------------Arama-------------------------  -->
+        <section id="aramasection">
+          <div class="row martop-100">
+            <div class="arama-baslik mt-5 flex-row justify-content-between position-relative">
+              <span class="cizgi-l"></span>
+              <h2 class="ms-3 me-3">ARAMA</h2>
+              <span class="cizgi-r"></span>
+            </div>
+            <div class="filterbar mt-4">
+              <input type="text" id="kartsBar" onkeyup="kartAra()" placeholder="Kartları arayın..." title="Kart Arama Motoru">
+            </div>
+            <div id="arama-container" class="arcon vdisabled">
+              <div class="kartlar-layout">
+                <div class="kart">
+                  <div class="kart-bg deadeye-color"></div>
+                  <div class="kart-img">
+                    <img class="kart-res" src="images/cards/deadeye/ABILITY_CARD_A_MOMENT_TO_RECUPERATE.png" alt="#">
+                    <div class="kart-hover">
+                      <div class="kart-info">
+                        <h1>A Moment To Recuperate</h1>
+                        <p>Dead Eye Aktifken yavaşça can yenilersin. Aldığın herhangi bir hasar Dead Eye'ı iptal eder.</p>
+                      </div>
+                      <div class="rank-shield">
+                        <img src="images/rank_shield.png" alt="#">
+                        <span class="rank-no text-center">2</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="kart">
+                  <div class="kart-bg deadeye-color"></div>
+                  <div class="kart-img">
+                    <img src="images/cards/deadeye/ABILITY_CARD_FOCUS_FIRE.png" alt="#">
+                    <div class="kart-hover">
+                      <div class="kart-info">
+                        <h1>Focus Fire</h1>
+                        <p>Dead Eye aktifken sen ve takım arkadaşların biraz daha fazla hasar verirsiniz. Eğer diğer takım
+                          üyelerinde de bu karttan varsa etkiler katlanmaz.</p>
+                      </div>
+                      <div class="rank-shield">
+                        <img src="images/rank_shield.png" alt="#">
+                        <span class="rank-no text-center">2</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="kart">
+                  <div class="kart-bg deadeye-color"></div>
+                  <div class="kart-img">
+                    <img src="images/cards/deadeye/ABILITY_CARD_PAINT_IT_BLACK.png" alt="#">
+                    <div class="kart-hover">
+                      <div class="kart-info">
+                        <h1>Paint It Black</h1>
+                        <p>Dead Eye aktifken hedeflerini işaretlersin. İşaretlenen yerleri vurmak için silahını ateşle.
+                          Tüm
+                          vuruşlar Dead Eye'ı Tüketir.</p>
+                      </div>
+                      <div class="rank-shield">
+                        <img src="images/rank_shield.png" alt="#">
+                        <span class="rank-no text-center">2</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="kart">
+                  <div class="kart-bg deadeye-color"></div>
+                  <div class="kart-img">
+                    <img src="images/cards/deadeye/ABILITY_CARD_SLOW_AND_STEADY.png" alt="#">
+                    <div class="kart-hover">
+                      <div class="kart-info">
+                        <h1>Slow And Steady</h1>
+                        <p>Dead Eye Aktifken birazcık daha az hasar alırsınız ve kafadan vuruşlar sizi direkt öldürmez.
+                          Koşamaz veya depar atamazsınız. </p>
+                      </div>
+                      <div class="rank-shield">
+                        <img src="images/rank_shield.png" alt="#">
+                        <span class="rank-no text-center">24</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="kart">
+                  <div class="kart-bg deadeye-color"></div>
+                  <div class="kart-img">
+                    <img src="images/cards/deadeye/ABILITY_CARD_QUITE_AN_INSPIRATION.png" alt="#">
+                    <div class="kart-hover">
+                      <div class="kart-info">
+                        <h1>Quite An Inspiration</h1>
+                        <p>Dead Eye aktifken sen ve takım arkadaşların yavaşça can yenilersiniz. Takımda birden fazla
+                          kişide
+                          varsa etkiler katlanmaz.</p>
+                      </div>
+                      <div class="rank-shield">
+                        <img src="images/rank_shield.png" alt="#">
+                        <span class="rank-no text-center">44</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="kart">
+                  <div class="kart-bg deadeye-color"></div>
+                  <div class="kart-img">
+                    <img src="images/cards/deadeye/ABILITY_CARD_SLIPPERY_BASTARD.png" alt="">
+                    <div class="kart-hover">
+                      <div class="kart-info">
+                        <h1>Slippery Bastard</h1>
+                        <p>Dead Eye aktifken düşman oyuncular sana kitlenemez sen de onlara kitlenemezsin. Düşmanlar sana
+                          birazcık daha az bir doğruluk oranıyla ateş eder. Dead Eye çok hızlı bir şekilde tükenir.</p>
+                      </div>
+                      <div class="rank-shield">
+                        <img src="images/rank_shield.png" alt="#">
+                        <span class="rank-no text-center">50</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+  
+  
+                <div class="kart">
+                  <div class="kart-bg combat-color"></div>
+                  <div class="kart-img">
+                    <img src="images/cards/combat/ABILITY_CARD_GUNSLINGERS_CHOICE.png" alt="#">
+                    <div class="kart-hover">
+                      <div class="kart-info">
+                        <h1>Gunslinger's Choice</h1>
+                        <p>Çift silah kullanımında daha fazla hasar verirsiniz ve daha isabetli olursunuz.</p>
+                      </div>
+                      <div class="rank-shield">
+                        <img src="images/rank_shield.png" alt="#">
+                        <span class="rank-no text-center">10</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+    
+                <div class="kart">
+                  <div class="kart-bg combat-color"></div>
+                  <div class="kart-img">
+                    <img src="images/cards/combat/ABILITY_CARD_HORSEMAN.png" alt="#">
+                    <div class="kart-hover">
+                      <div class="kart-info">
+                        <h1>Horseman</h1>
+                        <p>At sırtında daha fazla hasar verirsiniz.</p>
+                      </div>
+                      <div class="rank-shield">
+                        <img src="images/rank_shield.png" alt="#">
+                        <span class="rank-no text-center">10</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+    
+                <div class="kart">
+                  <div class="kart-bg combat-color"></div>
+                  <div class="kart-img">
+                    <img src="images/cards/combat/ABILITY_CARD_SHARPSHOOTER.png" alt="#">
+                    <div class="kart-hover">
+                      <div class="kart-info">
+                        <h1>Sharpshooter</h1>
+                        <p>Dürbün kullanırken daha fazla hasar verir ve daha az hasar alırsınız. </p>
+                      </div>
+                      <div class="rank-shield">
+                        <img src="images/rank_shield.png" alt="#">
+                        <span class="rank-no text-center">10</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+    
+                <div class="kart">
+                  <div class="kart-bg combat-color"></div>
+                  <div class="kart-img">
+                    <img src="images/cards/combat/ABILITY_CARD_NECESSITY_BREEDS.png" alt="#">
+                    <div class="kart-hover">
+                      <div class="kart-info">
+                        <h1>Necessity Breeds</h1>
+                        <p>Ölüme yaklaştıkça verdiğiniz hasar artar.</p>
+                      </div>
+                      <div class="rank-shield">
+                        <img src="images/rank_shield.png" alt="#">
+                        <span class="rank-no text-center">16</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+    
+                <div class="kart">
+                  <div class="kart-bg combat-color"></div>
+                  <div class="kart-img">
+                    <img src="images/cards/combat/ABILITY_CARD_LANDONS_PATIENCE.png" alt="#">
+                    <div class="kart-hover">
+                      <div class="kart-info">
+                        <h1>LANDON'S PATIENCE</h1>
+                        <p>Vuruşlar arası 15 saniye beklemek verdiğiniz hasarı arttırır.</p>
+                      </div>
+                      <div class="rank-shield">
+                        <img src="images/rank_shield.png" alt="#">
+                        <span class="rank-no text-center">18</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+    
+                <div class="kart">
+                  <div class="kart-bg combat-color"></div>
+                  <div class="kart-img">
+                    <img src="images/cards/combat/ABILITY_CARD_THE_SHORT_GAME.png" alt="#">
+                    <div class="kart-hover">
+                      <div class="kart-info">
+                        <h1>The Short Game</h1>
+                        <p>Yakın hedeflere daha fazla uzaktakilere daha az hasar verirsiniz.</p>
+                      </div>
+                      <div class="rank-shield">
+                        <img src="images/rank_shield.png" alt="#">
+                        <span class="rank-no text-center">38</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+    
+                <div class="kart">
+                  <div class="kart-bg combat-color"></div>
+                  <div class="kart-img">
+                    <img src="images/cards/combat/ABILITY_CARD_HANGMAN.png" alt="#">
+                    <div class="kart-hover">
+                      <div class="kart-info">
+                        <h1>Hangman</h1>
+                        <p>Lassolanan(Kement Atılan) düşmanlar, lassolandığı her an boğularak hasar alır.</p>
+                      </div>
+                      <div class="rank-shield">
+                        <img src="images/rank_shield.png" alt="#">
+                        <span class="rank-no text-center">42</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+    
+                <div class="kart">
+                  <div class="kart-bg combat-color"></div>
+                  <div class="kart-img">
+                    <img src="images/cards/combat/ABILITY_CARD_WINNING_STREAK.png" alt="#">
+                    <div class="kart-hover">
+                      <div class="kart-info">
+                        <h1>Winning Streak</h1>
+                        <p>Aynı hedefe arka arkaya yapılan her atış biraz daha fazla hasar verir.</p>
+                      </div>
+                      <div class="rank-shield">
+                        <img src="images/rank_shield.png" alt="#">
+                        <span class="rank-no text-center">48</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="kart">
+                  <div class="kart-bg recovery-color"></div>
+                  <div class="kart-img">
+                    <img src="images/cards/recovery/ABILITY_CARD_IRON_LUNG.png" alt="#">
+                    <div class="kart-hover">
+                      <div class="kart-info">
+                        <h1>Iron Lung</h1>
+                        <p>Stamina daha hızlı dolar ve stamina miktarına göre daha az hasar alırsınız.</p>
+                      </div>
+                      <div class="rank-shield">
+                        <img src="images/rank_shield.png" alt="#">
+                        <span class="rank-no text-center">10</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+    
+                <div class="kart">
+                  <div class="kart-bg recovery-color"></div>
+                  <div class="kart-img">
+                    <img src="images/cards/recovery/ABILITY_CARD_KICK_IN_THE_BUTT.png" alt="#">
+                    <div class="kart-hover">
+                      <div class="kart-info">
+                        <h1>Kick In The Butt</h1>
+                        <p>Hasar aldığınız zaman, dead eye'ın bir kısmı yenilenir.</p>
+                      </div>
+                      <div class="rank-shield">
+                        <img src="images/rank_shield.png" alt="#">
+                        <span class="rank-no text-center">10</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+    
+                <div class="kart">
+                  <div class="kart-bg recovery-color"></div>
+                  <div class="kart-img">
+                    <img src="images/cards/recovery/ABILITY_CARD_LIVE_FOR_THE_FIGHT.png" alt="#">
+                    <div class="kart-hover">
+                      <div class="kart-info">
+                        <h1>Live For The Fight</h1>
+                        <p>Dead Eye zaman içinde yenilenir.</p>
+                      </div>
+                      <div class="rank-shield">
+                        <img src="images/rank_shield.png" alt="#">
+                        <span class="rank-no text-center">10</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+    
+                <div class="kart">
+                  <div class="kart-bg recovery-color"></div>
+                  <div class="kart-img">
+                    <img src="images/cards/recovery/ABILITY_CARD_RIDE_LIKE_THE_WIND.png" alt="#">
+                    <div class="kart-hover">
+                      <div class="kart-info">
+                        <h1>Ride Like The Wind</h1>
+                        <p>At üstünde hasar aldığınızda ya da verdiğinizde, bir kısmı atınızın canını ve staminasını
+                          yeniler.</p>
+                      </div>
+                      <div class="rank-shield">
+                        <img src="images/rank_shield.png" alt="#">
+                        <span class="rank-no text-center">10</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+    
+                <div class="kart">
+                  <div class="kart-bg recovery-color"></div>
+                  <div class="kart-img">
+                    <img src="images/cards/recovery/ABILITY_CARD_COME_BACK_STRONGER.png" alt="#">
+                    <div class="kart-hover">
+                      <div class="kart-info">
+                        <h1>Come Back Stronger</h1>
+                        <p>Canınız, hasar aldıktan sonra daha erken yenilenmeye başlar.</p>
+                      </div>
+                      <div class="rank-shield">
+                        <img src="images/rank_shield.png" alt="#">
+                        <span class="rank-no text-center">10</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+    
+                <div class="kart">
+                  <div class="kart-bg recovery-color"></div>
+                  <div class="kart-img">
+                    <img src="images/cards/recovery/ABILITY_CARD_PEAK_CONDITION.png" alt="#">
+                    <div class="kart-hover">
+                      <div class="kart-info">
+                        <h1>Peak Condition</h1>
+                        <p>Staminanız en az %75 doluysa biraz daha fazla hasar verirsiniz.</p>
+                      </div>
+                      <div class="rank-shield">
+                        <img src="images/rank_shield.png" alt="#">
+                        <span class="rank-no text-center">14</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+    
+                <div class="kart">
+                  <div class="kart-bg recovery-color"></div>
+                  <div class="kart-img">
+                    <img src="images/cards/recovery/ABILITY_CARD_EYE_FOR_AN_EYE.png" alt="#">
+                    <div class="kart-hover">
+                      <div class="kart-info">
+                        <h1>Eye For An Eye</h1>
+                        <p>Kafadan vuruşlar Dead Eye'ın bir kısmını yeniler.</p>
+                      </div>
+                      <div class="rank-shield">
+                        <img src="images/rank_shield.png" alt="#">
+                        <span class="rank-no text-center">28</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+    
+                <div class="kart">
+                  <div class="kart-bg recovery-color"></div>
+                  <div class="kart-img">
+                    <img src="images/cards/recovery/ABILITY_CARD_STRANGE_MEDICINE.png" alt="#">
+                    <div class="kart-hover">
+                      <div class="kart-info">
+                        <h1>Strange Medicine</h1>
+                        <p>Hasar verdiğinde can kazanırsın. Fakat normal olarak canının sadece yarısı yenilenir. </p>
+                      </div>
+                      <div class="rank-shield">
+                        <img src="images/rank_shield.png" alt="#">
+                        <span class="rank-no text-center">32</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+    
+                <div class="kart">
+                  <div class="kart-bg recovery-color"></div>
+                  <div class="kart-img">
+                    <img src="images/cards/recovery/ABILITY_CARD_COLD_BLOODED.png" alt="#">
+                    <div class="kart-hover">
+                      <div class="kart-info">
+                        <h1>Cold Blooded</h1>
+                        <p>Düşman öldürdükten sonra 5 saniye içinde can kazanırsın.</p>
+                      </div>
+                      <div class="rank-shield">
+                        <img src="images/rank_shield.png" alt="#">
+                        <span class="rank-no text-center">36</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+    
+                <div class="kart">
+                  <div class="kart-bg recovery-color"></div>
+                  <div class="kart-img">
+                    <img src="images/cards/recovery/ABILITY_CARD_THE_GIFT_OF_FOCUS.png" alt="#">
+                    <div class="kart-hover">
+                      <div class="kart-info">
+                        <h1>The Gift Of Focus</h1>
+                        <p>Dead Eye yeteneğini yenileyen eşyaların etkilerini arttırır. Daha az hasar verirsiniz.</p>
+                      </div>
+                      <div class="rank-shield">
+                        <img src="images/rank_shield.png" alt="#">
+                        <span class="rank-no text-center">40</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="kart">
+                  <div class="kart-bg defense-color"></div>
+                  <div class="kart-img">
+                    <img src="images/cards/defense/ABILITY_CARD_FOOL_ME_ONCE.png" alt="#">
+                    <div class="kart-hover">
+                      <div class="kart-info">
+                        <h1>Fool Me Once</h1>
+                        <p>Her vurulduğunuzda daha az hasar alırsınız. Bu etki, 10 saniye boyunca vurulmazsanız ortadan
+                          kalkar.</p>
+                      </div>
+                      <div class="rank-shield">
+                        <img src="images/rank_shield.png" alt="#">
+                        <span class="rank-no text-center">10</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+    
+                <div class="kart">
+                  <div class="kart-bg defense-color"></div>
+                  <div class="kart-img">
+                    <img src="images/cards/defense/ABILITY_CARD_FRIENDS_FOR_LIFE.png" alt="#">
+                    <div class="kart-hover">
+                      <div class="kart-info">
+                        <h1>Friends For Life</h1>
+                        <p>At sırtındayken, sen ve atın daha az hasar alırsınız.</p>
+                      </div>
+                      <div class="rank-shield">
+                        <img src="images/rank_shield.png" alt="#">
+                        <span class="rank-no text-center">10</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+    
+                <div class="kart">
+                  <div class="kart-bg defense-color"></div>
+                  <div class="kart-img">
+                    <img src="images/cards/defense/ABILITY_CARD_STRENGTH_IN_NUMBERS.png" alt="#">
+                    <div class="kart-hover">
+                      <div class="kart-info">
+                        <h1>Strength In Numbers</h1>
+                        <p>Yanındaki her takım arkadaşı için daha az hasar alırısnız. En fazla 3 takım arkadaşı.</p>
+                      </div>
+                      <div class="rank-shield">
+                        <img src="images/rank_shield.png" alt="#">
+                        <span class="rank-no text-center">10</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+    
+                <div class="kart">
+                  <div class="kart-bg defense-color"></div>
+                  <div class="kart-img">
+                    <img src="images/cards/defense/ABILITY_CARD_HUNKER_DOWN.png" alt="#">
+                    <div class="kart-hover">
+                      <div class="kart-info">
+                        <h1>Hunker Down</h1>
+                        <p>Siperdeyken daha az hasar alırsın.</p>
+                      </div>
+                      <div class="rank-shield">
+                        <img src="images/rank_shield.png" alt="#">
+                        <span class="rank-no text-center">20</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+    
+                <div class="kart">
+                  <div class="kart-bg defense-color"></div>
+                  <div class="kart-img">
+                    <img src="images/cards/defense/ABILITY_CARD_TO_FIGHT_ANOTHER_DAY.png" alt="#">
+                    <div class="kart-hover">
+                      <div class="kart-info">
+                        <h1>To Fight Another Day</h1>
+                        <p>Koşarken, mermilerden daha az hasar alırsın.</p>
+                      </div>
+                      <div class="rank-shield">
+                        <img src="images/rank_shield.png" alt="#">
+                        <span class="rank-no text-center">22</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+    
+                <div class="kart">
+                  <div class="kart-bg defense-color"></div>
+                  <div class="kart-img">
+                    <img src="images/cards/defense/ABILITY_CARD_THE_UNBLINKING_EYE.png" alt="#">
+                    <div class="kart-hover">
+                      <div class="kart-info">
+                        <h1>The Unblinking Eye</h1>
+                        <p>Dead Eye yeteneği daha yavaş tükenir.</p>
+                      </div>
+                      <div class="rank-shield">
+                        <img src="images/rank_shield.png" alt="#">
+                        <span class="rank-no text-center">26</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+    
+                <div class="kart">
+                  <div class="kart-bg defense-color"></div>
+                  <div class="kart-img">
+                    <img src="images/cards/defense/ABILITY_CARD_TAKE_THE_PAIN_AWAY.png" alt="#">
+                    <div class="kart-hover">
+                      <div class="kart-info">
+                        <h1>Take The Pain Away</h1>
+                        <p>Birisini diriltmek, sana ve diriltilene 8 saniye boyunca daha az hasar alma kazandırır.</p>
+                      </div>
+                      <div class="rank-shield">
+                        <img src="images/rank_shield.png" alt="#">
+                        <span class="rank-no text-center">34</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+    
+                <div class="kart">
+                  <div class="kart-bg defense-color"></div>
+                  <div class="kart-img">
+                    <img src="images/cards/defense/ABILITY_CARD_OF_SINGLE_PURPOSE.png" alt="#">
+                    <div class="kart-hover">
+                      <div class="kart-info">
+                        <h1>Of Single Purpose</h1>
+                        <p>Silahsızken ve yakın dövüş silahları kullanıyorken mermilerden daha az hasar alırsın.</p>
+                      </div>
+                      <div class="rank-shield">
+                        <img src="images/rank_shield.png" alt="#">
+                        <span class="rank-no text-center">40</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+    
+                <div class="kart">
+                  <div class="kart-bg defense-color"></div>
+                  <div class="kart-img">
+                    <img src="images/cards/defense/ABILITY_CARD_NEVER_WITHOUT_ONE.png" alt="#">
+                    <div class="kart-hover">
+                      <div class="kart-info">
+                        <h1>Never Without One</h1>
+                        <p>Şapkan bir kafadan vuruşu engeller ve düşer. Eğer şapkan yoksa daha fazla hasar alırsın.</p>
+                      </div>
+                      <div class="rank-shield">
+                        <img src="images/rank_shield.png" alt="#">
+                        <span class="rank-no text-center">46</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+  
+              </div>
+            </div>
+          </div>
+        </section>
+        <!--!  -------------------------Arama-------------------------  -->
+
+        <section id="deadeye">
+          <!--  -------------------------Çizgili Başlık-------------------------  -->
+          <div class="c-baslik mt-5 flex-row justify-content-between position-relative">
+            <span class="cizgi-l"></span>
+            <h2 class="ms-3 me-3">Dead Eye Yetenek Kartları</h2>
+            <span class="cizgi-r"></span>
+          </div>
+          <!--  -------------------------Çizgili Başlık-------------------------  -->
+
+
+          <div class="aramasiz row d-flex justify-content-center align-items-center ">
+
+            <!--  -------------------------Dead Eye Kartları-------------------------  -->
+
+            <div class="kartlar-layout">
+
+              <div class="kart">
+                <div class="kart-bg deadeye-color"></div>
+                <div class="kart-img">
+                  <img class="kart-res" src="images/cards/deadeye/ABILITY_CARD_A_MOMENT_TO_RECUPERATE.png" alt="#">
+                  <div class="kart-hover">
+                    <div class="kart-info">
+                      <h1>A Moment To Recuperate</h1>
+                      <p>Dead Eye Aktifken yavaşça can yenilersin. Aldığın herhangi bir hasar Dead Eye'ı iptal eder.</p>
+                    </div>
+                    <div class="rank-shield">
+                      <img src="images/rank_shield.png" alt="#">
+                      <span class="rank-no text-center">2</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="kart">
+                <div class="kart-bg deadeye-color"></div>
+                <div class="kart-img">
+                  <img src="images/cards/deadeye/ABILITY_CARD_FOCUS_FIRE.png" alt="#">
+                  <div class="kart-hover">
+                    <div class="kart-info">
+                      <h1>Focus Fire</h1>
+                      <p>Dead Eye aktifken sen ve takım arkadaşların biraz daha fazla hasar verirsiniz. Eğer diğer takım
+                        üyelerinde de bu karttan varsa etkiler katlanmaz.</p>
+                    </div>
+                    <div class="rank-shield">
+                      <img src="images/rank_shield.png" alt="#">
+                      <span class="rank-no text-center">2</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="kart">
+                <div class="kart-bg deadeye-color"></div>
+                <div class="kart-img">
+                  <img src="images/cards/deadeye/ABILITY_CARD_PAINT_IT_BLACK.png" alt="#">
+                  <div class="kart-hover">
+                    <div class="kart-info">
+                      <h1>Paint It Black</h1>
+                      <p>Dead Eye aktifken hedeflerini işaretlersin. İşaretlenen yerleri vurmak için silahını ateşle.
+                        Tüm
+                        vuruşlar Dead Eye'ı Tüketir.</p>
+                    </div>
+                    <div class="rank-shield">
+                      <img src="images/rank_shield.png" alt="#">
+                      <span class="rank-no text-center">2</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="kart">
+                <div class="kart-bg deadeye-color"></div>
+                <div class="kart-img">
+                  <img src="images/cards/deadeye/ABILITY_CARD_SLOW_AND_STEADY.png" alt="#">
+                  <div class="kart-hover">
+                    <div class="kart-info">
+                      <h1>Slow And Steady</h1>
+                      <p>Dead Eye Aktifken birazcık daha az hasar alırsınız ve kafadan vuruşlar sizi direkt öldürmez.
+                        Koşamaz veya depar atamazsınız. </p>
+                    </div>
+                    <div class="rank-shield">
+                      <img src="images/rank_shield.png" alt="#">
+                      <span class="rank-no text-center">24</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="kart">
+                <div class="kart-bg deadeye-color"></div>
+                <div class="kart-img">
+                  <img src="images/cards/deadeye/ABILITY_CARD_QUITE_AN_INSPIRATION.png" alt="#">
+                  <div class="kart-hover">
+                    <div class="kart-info">
+                      <h1>Quite An Inspiration</h1>
+                      <p>Dead Eye aktifken sen ve takım arkadaşların yavaşça can yenilersiniz. Takımda birden fazla
+                        kişide
+                        varsa etkiler katlanmaz.</p>
+                    </div>
+                    <div class="rank-shield">
+                      <img src="images/rank_shield.png" alt="#">
+                      <span class="rank-no text-center">44</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="kart">
+                <div class="kart-bg deadeye-color"></div>
+                <div class="kart-img">
+                  <img src="images/cards/deadeye/ABILITY_CARD_SLIPPERY_BASTARD.png" alt="">
+                  <div class="kart-hover">
+                    <div class="kart-info">
+                      <h1>Slippery Bastard</h1>
+                      <p>Dead Eye aktifken düşman oyuncular sana kitlenemez sen de onlara kitlenemezsin. Düşmanlar sana
+                        birazcık daha az bir doğruluk oranıyla ateş eder. Dead Eye çok hızlı bir şekilde tükenir.</p>
+                    </div>
+                    <div class="rank-shield">
+                      <img src="images/rank_shield.png" alt="#">
+                      <span class="rank-no text-center">50</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--  -------------------------Dead Eye Kartları-------------------------  -->
+        </section>
+
+        <section id="combat">
+          <div class="c-baslik mt-5 flex-row justify-content-between position-relative">
+            <span class="cizgi-l"></span>
+            <h2 class="ms-3 me-3">Combat Yetenek Kartları</h2>
+            <span class="cizgi-r"></span>
+          </div>
+
+
+
+          <!--  -------------------------Combat Kartları-------------------------  -->
+          <div class="aramasiz row d-flex justify-content-center align-items-center">
+            <div class="kartlar-layout">
+
+              <div class="kart">
+                <div class="kart-bg combat-color"></div>
+                <div class="kart-img">
+                  <img src="images/cards/combat/ABILITY_CARD_GUNSLINGERS_CHOICE.png" alt="#">
+                  <div class="kart-hover">
+                    <div class="kart-info">
+                      <h1>Gunslinger's Choice</h1>
+                      <p>Çift silah kullanımında daha fazla hasar verirsiniz ve daha isabetli olursunuz.</p>
+                    </div>
+                    <div class="rank-shield">
+                      <img src="images/rank_shield.png" alt="#">
+                      <span class="rank-no text-center">10</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="kart">
+                <div class="kart-bg combat-color"></div>
+                <div class="kart-img">
+                  <img src="images/cards/combat/ABILITY_CARD_HORSEMAN.png" alt="#">
+                  <div class="kart-hover">
+                    <div class="kart-info">
+                      <h1>Horseman</h1>
+                      <p>At sırtında daha fazla hasar verirsiniz.</p>
+                    </div>
+                    <div class="rank-shield">
+                      <img src="images/rank_shield.png" alt="#">
+                      <span class="rank-no text-center">10</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="kart">
+                <div class="kart-bg combat-color"></div>
+                <div class="kart-img">
+                  <img src="images/cards/combat/ABILITY_CARD_SHARPSHOOTER.png" alt="#">
+                  <div class="kart-hover">
+                    <div class="kart-info">
+                      <h1>Sharpshooter</h1>
+                      <p>Dürbün kullanırken daha fazla hasar verir ve daha az hasar alırsınız. </p>
+                    </div>
+                    <div class="rank-shield">
+                      <img src="images/rank_shield.png" alt="#">
+                      <span class="rank-no text-center">10</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="kart">
+                <div class="kart-bg combat-color"></div>
+                <div class="kart-img">
+                  <img src="images/cards/combat/ABILITY_CARD_NECESSITY_BREEDS.png" alt="#">
+                  <div class="kart-hover">
+                    <div class="kart-info">
+                      <h1>Necessity Breeds</h1>
+                      <p>Ölüme yaklaştıkça verdiğiniz hasar artar.</p>
+                    </div>
+                    <div class="rank-shield">
+                      <img src="images/rank_shield.png" alt="#">
+                      <span class="rank-no text-center">16</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="kart">
+                <div class="kart-bg combat-color"></div>
+                <div class="kart-img">
+                  <img src="images/cards/combat/ABILITY_CARD_LANDONS_PATIENCE.png" alt="#">
+                  <div class="kart-hover">
+                    <div class="kart-info">
+                      <h1>LANDON'S PATIENCE</h1>
+                      <p>Vuruşlar arası 15 saniye beklemek verdiğiniz hasarı arttırır.</p>
+                    </div>
+                    <div class="rank-shield">
+                      <img src="images/rank_shield.png" alt="#">
+                      <span class="rank-no text-center">18</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="kart">
+                <div class="kart-bg combat-color"></div>
+                <div class="kart-img">
+                  <img src="images/cards/combat/ABILITY_CARD_THE_SHORT_GAME.png" alt="#">
+                  <div class="kart-hover">
+                    <div class="kart-info">
+                      <h1>The Short Game</h1>
+                      <p>Yakın hedeflere daha fazla uzaktakilere daha az hasar verirsiniz.</p>
+                    </div>
+                    <div class="rank-shield">
+                      <img src="images/rank_shield.png" alt="#">
+                      <span class="rank-no text-center">38</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="kart">
+                <div class="kart-bg combat-color"></div>
+                <div class="kart-img">
+                  <img src="images/cards/combat/ABILITY_CARD_HANGMAN.png" alt="#">
+                  <div class="kart-hover">
+                    <div class="kart-info">
+                      <h1>Hangman</h1>
+                      <p>Lassolanan(Kement Atılan) düşmanlar, lassolandığı her an boğularak hasar alır.</p>
+                    </div>
+                    <div class="rank-shield">
+                      <img src="images/rank_shield.png" alt="#">
+                      <span class="rank-no text-center">42</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="kart">
+                <div class="kart-bg combat-color"></div>
+                <div class="kart-img">
+                  <img src="images/cards/combat/ABILITY_CARD_WINNING_STREAK.png" alt="#">
+                  <div class="kart-hover">
+                    <div class="kart-info">
+                      <h1>Winning Streak</h1>
+                      <p>Aynı hedefe arka arkaya yapılan her atış biraz daha fazla hasar verir.</p>
+                    </div>
+                    <div class="rank-shield">
+                      <img src="images/rank_shield.png" alt="#">
+                      <span class="rank-no text-center">48</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+            </div>
+          </div>
+
+          <!--  -------------------------Combat Kartları-------------------------  -->
+        </section>
+
+        <section id="recovery">
+          <div class="c-baslik mt-5 flex-row justify-content-between position-relative">
+            <span class="cizgi-l"></span>
+            <h2 class="ms-3 me-3">Recovery Yetenek Kartları</h2>
+            <span class="cizgi-r"></span>
+          </div>
+
+          <!--  -------------------------Recovery Kartları-------------------------  -->
+          <div class="aramasiz row d-flex justify-content-center align-items-center">
+            <div class="kartlar-layout">
+
+              <div class="kart">
+                <div class="kart-bg recovery-color"></div>
+                <div class="kart-img">
+                  <img src="images/cards/recovery/ABILITY_CARD_IRON_LUNG.png" alt="#">
+                  <div class="kart-hover">
+                    <div class="kart-info">
+                      <h1>Iron Lung</h1>
+                      <p>Stamina daha hızlı dolar ve stamina miktarına göre daha az hasar alırsınız.</p>
+                    </div>
+                    <div class="rank-shield">
+                      <img src="images/rank_shield.png" alt="#">
+                      <span class="rank-no text-center">10</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="kart">
+                <div class="kart-bg recovery-color"></div>
+                <div class="kart-img">
+                  <img src="images/cards/recovery/ABILITY_CARD_KICK_IN_THE_BUTT.png" alt="#">
+                  <div class="kart-hover">
+                    <div class="kart-info">
+                      <h1>Kick In The Butt</h1>
+                      <p>Hasar aldığınız zaman, dead eye'ın bir kısmı yenilenir.</p>
+                    </div>
+                    <div class="rank-shield">
+                      <img src="images/rank_shield.png" alt="#">
+                      <span class="rank-no text-center">10</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="kart">
+                <div class="kart-bg recovery-color"></div>
+                <div class="kart-img">
+                  <img src="images/cards/recovery/ABILITY_CARD_LIVE_FOR_THE_FIGHT.png" alt="#">
+                  <div class="kart-hover">
+                    <div class="kart-info">
+                      <h1>Live For The Fight</h1>
+                      <p>Dead Eye zaman içinde yenilenir.</p>
+                    </div>
+                    <div class="rank-shield">
+                      <img src="images/rank_shield.png" alt="#">
+                      <span class="rank-no text-center">10</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="kart">
+                <div class="kart-bg recovery-color"></div>
+                <div class="kart-img">
+                  <img src="images/cards/recovery/ABILITY_CARD_RIDE_LIKE_THE_WIND.png" alt="#">
+                  <div class="kart-hover">
+                    <div class="kart-info">
+                      <h1>Ride Like The Wind</h1>
+                      <p>At üstünde hasar aldığınızda ya da verdiğinizde, bir kısmı atınızın canını ve staminasını
+                        yeniler.</p>
+                    </div>
+                    <div class="rank-shield">
+                      <img src="images/rank_shield.png" alt="#">
+                      <span class="rank-no text-center">10</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="kart">
+                <div class="kart-bg recovery-color"></div>
+                <div class="kart-img">
+                  <img src="images/cards/recovery/ABILITY_CARD_COME_BACK_STRONGER.png" alt="#">
+                  <div class="kart-hover">
+                    <div class="kart-info">
+                      <h1>Come Back Stronger</h1>
+                      <p>Canınız, hasar aldıktan sonra daha erken yenilenmeye başlar.</p>
+                    </div>
+                    <div class="rank-shield">
+                      <img src="images/rank_shield.png" alt="#">
+                      <span class="rank-no text-center">10</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="kart">
+                <div class="kart-bg recovery-color"></div>
+                <div class="kart-img">
+                  <img src="images/cards/recovery/ABILITY_CARD_PEAK_CONDITION.png" alt="#">
+                  <div class="kart-hover">
+                    <div class="kart-info">
+                      <h1>Peak Condition</h1>
+                      <p>Staminanız en az %75 doluysa biraz daha fazla hasar verirsiniz.</p>
+                    </div>
+                    <div class="rank-shield">
+                      <img src="images/rank_shield.png" alt="#">
+                      <span class="rank-no text-center">14</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="kart">
+                <div class="kart-bg recovery-color"></div>
+                <div class="kart-img">
+                  <img src="images/cards/recovery/ABILITY_CARD_EYE_FOR_AN_EYE.png" alt="#">
+                  <div class="kart-hover">
+                    <div class="kart-info">
+                      <h1>Eye For An Eye</h1>
+                      <p>Kafadan vuruşlar Dead Eye'ın bir kısmını yeniler.</p>
+                    </div>
+                    <div class="rank-shield">
+                      <img src="images/rank_shield.png" alt="#">
+                      <span class="rank-no text-center">28</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="kart">
+                <div class="kart-bg recovery-color"></div>
+                <div class="kart-img">
+                  <img src="images/cards/recovery/ABILITY_CARD_STRANGE_MEDICINE.png" alt="#">
+                  <div class="kart-hover">
+                    <div class="kart-info">
+                      <h1>Strange Medicine</h1>
+                      <p>Hasar verdiğinde can kazanırsın. Fakat normal olarak canının sadece yarısı yenilenir. </p>
+                    </div>
+                    <div class="rank-shield">
+                      <img src="images/rank_shield.png" alt="#">
+                      <span class="rank-no text-center">32</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="kart">
+                <div class="kart-bg recovery-color"></div>
+                <div class="kart-img">
+                  <img src="images/cards/recovery/ABILITY_CARD_COLD_BLOODED.png" alt="#">
+                  <div class="kart-hover">
+                    <div class="kart-info">
+                      <h1>Cold Blooded</h1>
+                      <p>Düşman öldürdükten sonra 5 saniye içinde can kazanırsın.</p>
+                    </div>
+                    <div class="rank-shield">
+                      <img src="images/rank_shield.png" alt="#">
+                      <span class="rank-no text-center">36</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="kart">
+                <div class="kart-bg recovery-color"></div>
+                <div class="kart-img">
+                  <img src="images/cards/recovery/ABILITY_CARD_THE_GIFT_OF_FOCUS.png" alt="#">
+                  <div class="kart-hover">
+                    <div class="kart-info">
+                      <h1>The Gift Of Focus</h1>
+                      <p>Dead Eye yeteneğini yenileyen eşyaların etkilerini arttırır. Daha az hasar verirsiniz.</p>
+                    </div>
+                    <div class="rank-shield">
+                      <img src="images/rank_shield.png" alt="#">
+                      <span class="rank-no text-center">40</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+  
+  
+            </div>
+          </div>
+          <!--  -------------------------Recovery Kartları-------------------------  -->
+        </section>
+
+        <section id="defense">
+          <div class="c-baslik mt-5 flex-row justify-content-between position-relative">
+            <span class="cizgi-l"></span>
+            <h2 class="ms-3 me-3">Defense Yetenek Kartları</h2>
+            <span class="cizgi-r"></span>
+          </div>
+
+          <!--  -------------------------Defense Kartları-------------------------  -->
+
+          <div class="aramasiz row d-flex justify-content-center align-items-center">
+            <div class="kartlar-layout">
+
+              <div class="kart">
+                <div class="kart-bg defense-color"></div>
+                <div class="kart-img">
+                  <img src="images/cards/defense/ABILITY_CARD_FOOL_ME_ONCE.png" alt="#">
+                  <div class="kart-hover">
+                    <div class="kart-info">
+                      <h1>Fool Me Once</h1>
+                      <p>Her vurulduğunuzda daha az hasar alırsınız. Bu etki, 10 saniye boyunca vurulmazsanız ortadan
+                        kalkar.</p>
+                    </div>
+                    <div class="rank-shield">
+                      <img src="images/rank_shield.png" alt="#">
+                      <span class="rank-no text-center">10</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="kart">
+                <div class="kart-bg defense-color"></div>
+                <div class="kart-img">
+                  <img src="images/cards/defense/ABILITY_CARD_FRIENDS_FOR_LIFE.png" alt="#">
+                  <div class="kart-hover">
+                    <div class="kart-info">
+                      <h1>Friends For Life</h1>
+                      <p>At sırtındayken, sen ve atın daha az hasar alırsınız.</p>
+                    </div>
+                    <div class="rank-shield">
+                      <img src="images/rank_shield.png" alt="#">
+                      <span class="rank-no text-center">10</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="kart">
+                <div class="kart-bg defense-color"></div>
+                <div class="kart-img">
+                  <img src="images/cards/defense/ABILITY_CARD_STRENGTH_IN_NUMBERS.png" alt="#">
+                  <div class="kart-hover">
+                    <div class="kart-info">
+                      <h1>Strength In Numbers</h1>
+                      <p>Yanındaki her takım arkadaşı için daha az hasar alırısnız. En fazla 3 takım arkadaşı.</p>
+                    </div>
+                    <div class="rank-shield">
+                      <img src="images/rank_shield.png" alt="#">
+                      <span class="rank-no text-center">10</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="kart">
+                <div class="kart-bg defense-color"></div>
+                <div class="kart-img">
+                  <img src="images/cards/defense/ABILITY_CARD_HUNKER_DOWN.png" alt="#">
+                  <div class="kart-hover">
+                    <div class="kart-info">
+                      <h1>Hunker Down</h1>
+                      <p>Siperdeyken daha az hasar alırsın.</p>
+                    </div>
+                    <div class="rank-shield">
+                      <img src="images/rank_shield.png" alt="#">
+                      <span class="rank-no text-center">20</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="kart">
+                <div class="kart-bg defense-color"></div>
+                <div class="kart-img">
+                  <img src="images/cards/defense/ABILITY_CARD_TO_FIGHT_ANOTHER_DAY.png" alt="#">
+                  <div class="kart-hover">
+                    <div class="kart-info">
+                      <h1>To Fight Another Day</h1>
+                      <p>Koşarken, mermilerden daha az hasar alırsın.</p>
+                    </div>
+                    <div class="rank-shield">
+                      <img src="images/rank_shield.png" alt="#">
+                      <span class="rank-no text-center">22</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="kart">
+                <div class="kart-bg defense-color"></div>
+                <div class="kart-img">
+                  <img src="images/cards/defense/ABILITY_CARD_THE_UNBLINKING_EYE.png" alt="#">
+                  <div class="kart-hover">
+                    <div class="kart-info">
+                      <h1>The Unblinking Eye</h1>
+                      <p>Dead Eye yeteneği daha yavaş tükenir.</p>
+                    </div>
+                    <div class="rank-shield">
+                      <img src="images/rank_shield.png" alt="#">
+                      <span class="rank-no text-center">26</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="kart">
+                <div class="kart-bg defense-color"></div>
+                <div class="kart-img">
+                  <img src="images/cards/defense/ABILITY_CARD_TAKE_THE_PAIN_AWAY.png" alt="#">
+                  <div class="kart-hover">
+                    <div class="kart-info">
+                      <h1>Take The Pain Away</h1>
+                      <p>Birisini diriltmek, sana ve diriltilene 8 saniye boyunca daha az hasar alma kazandırır.</p>
+                    </div>
+                    <div class="rank-shield">
+                      <img src="images/rank_shield.png" alt="#">
+                      <span class="rank-no text-center">34</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="kart">
+                <div class="kart-bg defense-color"></div>
+                <div class="kart-img">
+                  <img src="images/cards/defense/ABILITY_CARD_OF_SINGLE_PURPOSE.png" alt="#">
+                  <div class="kart-hover">
+                    <div class="kart-info">
+                      <h1>Of Single Purpose</h1>
+                      <p>Silahsızken ve yakın dövüş silahları kullanıyorken mermilerden daha az hasar alırsın.</p>
+                    </div>
+                    <div class="rank-shield">
+                      <img src="images/rank_shield.png" alt="#">
+                      <span class="rank-no text-center">40</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="kart">
+                <div class="kart-bg defense-color"></div>
+                <div class="kart-img">
+                  <img src="images/cards/defense/ABILITY_CARD_NEVER_WITHOUT_ONE.png" alt="#">
+                  <div class="kart-hover">
+                    <div class="kart-info">
+                      <h1>Never Without One</h1>
+                      <p>Şapkan bir kafadan vuruşu engeller ve düşer. Eğer şapkan yoksa daha fazla hasar alırsın.</p>
+                    </div>
+                    <div class="rank-shield">
+                      <img src="images/rank_shield.png" alt="#">
+                      <span class="rank-no text-center">46</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+            </div>
+          </div>
+
+          <!--  -------------------------Defense Kartları-------------------------  -->
+        </section>
+
+        <div class="footer-general row">
+
+          <div class="footer-decal"></div>
+
+          <div class="footer">
+            <div class="footer-content text-center">
+              <h5>2021 &copy; Eser Şahiner ♥</h5>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <div class="page-selector">
+    <div class="pasel dead-eye"><a href="#deadeye"></a></div>
+    <div class="pasel combat"><a href="#combat"></a></div>
+    <div class="pasel recovery"><a href="#recovery"></a></div>
+    <div class="pasel defense"><a href="#defense"></a></div>
+    <div class="pasel totop"><a href="#"><i class="fas fa-angle-up"></i></a></div>
+  </div>
+
+  </div>
+  <script src="js/cardsearch.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+  </script>
+  <script src="https://kit.fontawesome.com/71651d5108.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

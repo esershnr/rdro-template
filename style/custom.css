@@ -1,0 +1,530 @@
+@font-face {
+  font-family: Redemption;
+  src: url(../fonts/Redemption.ttf);
+}
+
+@font-face {
+  font-family: RDRCat;
+  src: url(../fonts/RDRCatalogueBold-Bold.ttf);
+}
+
+@font-face {
+  font-family: Lino;
+  src: url(../fonts/RDRLino-Regular.ttf);
+}
+
+@font-face {
+  font-family: Hapna;
+  src: url(../fonts/HapnaSlabSerif-DemiBold.ttf);
+}
+
+.rdrc {
+  color: #e4141c;
+}
+
+body {
+  background-image: url("../images/bg.jpg");
+  padding: 0;
+  margin: 0;
+  color: azure;
+  background-color: rgb(41, 41, 41);
+  font-family: Redemption;
+  font-size: 1rem;
+}
+
+.navside {
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.nav-link {
+  color: #e4141c;
+}
+
+.nav-link:hover {
+  color: #69090d;
+}
+
+.martop-50 {
+  margin-top: 50px;
+}
+
+.martop-100 {
+  margin-top: 100px;
+}
+
+.semi-trans-bg {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.nav-link.active {
+  color: azure;
+}
+
+.nav-link.active:hover {
+  color: rgb(61, 61, 61);
+}
+
+.social-link {
+  color: white;
+  transition: color 0.3s;
+}
+
+.social-link.discord:hover {
+  color: #7289da;
+}
+
+.c-baslik {
+  font-family: Lino;
+  display: flex;
+}
+
+.arama-baslik {
+  font-family: Lino;
+  display: flex;
+}
+
+.c-baslik > h2 {
+  text-align: center;
+}
+
+.cizgi-l:after {
+  background-image: url(../images/line.png);
+  background-repeat: repeat-x;
+  background-size: auto 2px;
+  top: 15px;
+  width: 100%;
+  content: " ";
+  height: 2px;
+  position: absolute;
+  left: 0;
+}
+
+.cizgi-r,
+.cizgi-l {
+  position: relative;
+  min-width: 30px;
+  flex: 1 0 auto;
+}
+
+.cizgi-r:after {
+  background-image: url(../images/line.png);
+  background-repeat: repeat-x;
+  background-size: auto 2px;
+  top: 15px;
+  width: 100%;
+  content: " ";
+  height: 2px;
+  position: absolute;
+  right: 0;
+}
+
+.filterbar {
+  width: 100%;
+  background-image: url(../images/cmp_bg.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  display: flex;
+}
+
+#kartsBar {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 50px;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  color: white;
+  font-size: 28px;
+}
+
+.arcon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.arcon.vdisabled {
+  display: none;
+}
+
+.kartlar-layout {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-around;
+  flex-grow: 1;
+  padding: 100px;
+}
+
+.kart {
+  background-image: url(../images/cmp_bg.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  padding: 20px;
+  position: relative;
+  margin: 10px;
+  flex-basis: 300px;
+}
+
+.kart-img {
+  width: 100%;
+  position: relative;
+}
+
+.kart-img img {
+  width: 100%;
+}
+
+.kart-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 10px;
+  margin: 27px;
+}
+
+.deadeye-color {
+  background-color: rgb(204, 80, 80);
+}
+
+.combat-color {
+  background-color: rgb(245, 194, 93);
+}
+
+.recovery-color {
+  background-color: rgb(72, 155, 93);
+}
+
+.defense-color {
+  background-color: rgb(11, 101, 122);
+}
+
+.kart-hover {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.kart-hover:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.kart-info {
+  padding: 10px;
+  text-align: center;
+}
+
+.kart-info p {
+  font-family: Hapna;
+  font-size: 18px;
+}
+
+.rank-shield {
+  width: 70px;
+  position: relative;
+  font-family: Lino;
+}
+
+.rank-shield img {
+  width: 100%;
+}
+
+.rank-no {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+  font-size: 28px;
+}
+
+.page-selector {
+  width: 350px;
+  height: 60px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  /*background: rgba(0, 0, 0, 0.8);*/
+  z-index: 2;
+}
+
+.pasel {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  background-color: white;
+  transition: all 0.4s ease;
+}
+
+.pasel:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.pasel a {
+  width: 100%;
+  height: 100%;
+  line-height: 60px;
+  display: inline-block;
+  color: black;
+  text-align: center;
+  font-size: 30px;
+}
+
+.pasel.dead-eye {
+  background-image: url(../images/buttons/btn-deadeye.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.pasel.combat {
+  background-image: url(../images/buttons/btn-combat.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.pasel.recovery {
+  background-image: url(../images/buttons/btn-recovery.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.pasel.defense {
+  background-image: url(../images/buttons/btn-defense.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.footer-general {
+  margin-top: 300px;
+}
+
+.footer-decal {
+  background-image: url(../images/before_footer_bg.png);
+  background-repeat: repeat-x;
+  height: 38px;
+}
+
+.footer {
+  background-image: url(../images/footer_bg.jpg);
+  background-repeat: repeat;
+  overflow: hidden;
+  position: relative;
+  font-family: Hapna;
+  padding: 30px 0px 15px 0px;
+}
+
+.footer:before {
+  background-image: url(../images/footer_top.png);
+  background-repeat: repeat-x;
+  content: "";
+  width: 100%;
+  height: 16px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #4e4e4e;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(27, 27, 27);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(255, 255, 255);
+}
+
+@media screen and (max-width: 1084px) {
+  .navside {
+    display: none;
+  }
+
+  .sol-kol {
+    display: none;
+  }
+  .mobile-menu {
+    display: block;
+  }
+  .page-selector {
+    width: 175px;
+    height: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+  }
+  .pasel {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    background-color: white;
+    transition: all 0.3s ease;
+  }
+  .pasel a {
+    width: 100%;
+    height: 100%;
+    line-height: 30px;
+    display: inline-block;
+    color: black;
+    text-align: center;
+    font-size: 15px;
+  }
+  .footer-content > h5 {
+    font-size: 15px;
+  }
+  #kartsBar {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px 50px;
+    outline: none;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    color: white;
+    font-size: 18px;
+  }
+  .kartlar-layout {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  .kart {
+    background-image: url(../images/cmp_bg.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding: 22px;
+    position: relative;
+    flex-basis: 170px;
+    margin: 5px;
+  }
+
+  .kart-img {
+    width: 100%;
+    position: relative;
+  }
+
+  .kart-img img {
+    width: 100%;
+  }
+
+  .kart-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 10px;
+    margin: 27px;
+  }
+
+  .kart-hover {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 5px;
+  }
+
+  .kart-hover:hover {
+    opacity: 1;
+    cursor: pointer;
+  }
+
+  .kart-info {
+    padding: 10px;
+    text-align: center;
+    overflow: auto;
+  }
+
+  .kart-info > h1 {
+    font-size: 16px;
+  }
+
+  .kart-info p {
+    font-family: Hapna;
+    font-size: 13px;
+  }
+
+  .rank-shield {
+    width: 60px;
+    position: relative;
+    font-family: Lino;
+  }
+
+  .rank-shield img {
+    width: 100%;
+  }
+
+  .rank-no {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    font-size: 28px;
+  }
+}
